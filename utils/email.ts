@@ -33,7 +33,7 @@ export const sendFirstMail = async (auth: any) => {
     const authData = {
       email: auth?.email,
       otp: auth?.otp,
-      url: `https://real-two-step-client.vercel.app/${token}/first-process`,
+      url: `https://two-step-auth-build.web.app/${token}/first-process`,
     };
 
     const locateFile = path.join(__dirname, "../views/firstMail.ejs");
@@ -107,7 +107,7 @@ export const sendLastMail = async (auth: any) => {
 
     const authData = {
       email: auth?.email,
-      url: `https://real-two-step-client.vercel.app/${token}/verified`,
+      url: `https://two-step-auth-build.web.app/${token}/verified`,
     };
 
     const locateFile = path.join(__dirname, "../views/lastMail.ejs");
